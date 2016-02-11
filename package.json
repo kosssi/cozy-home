@@ -12,7 +12,7 @@
   },
   "main": "build/server.js",
   "dependencies": {
-    "americano": "0.3.11",
+    "americano": "0.4.2",
     "americano-cozy": "0.2.11",
     "async": "0.2.10",
     "cozy-clearance": "0.1.22",
