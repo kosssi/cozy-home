@@ -7,10 +7,11 @@ process.on('uncaughtException', function(err) {
 });
 
 application = module.exports = function(callback) {
-  var americano, autoStop, initProxy, localization, options, request, setupRealtime, versionChecking;
+  var americano, autoStop, initApps, initProxy, localization, options, request, setupRealtime, versionChecking;
   americano = require('americano');
   request = require('request-json');
   localization = require('./server/helpers/localization_manager');
+  initApps = require('./server/initializers/apps');
   initProxy = require('./server/initializers/proxy');
   setupRealtime = require('./server/initializers/realtime');
   versionChecking = require('./server/initializers/updates');
@@ -24,7 +25,9 @@ application = module.exports = function(callback) {
   return americano.start(options, function(err, app, server) {
     app.server = server;
     if (process.env.NODE_ENV !== "test") {
-      initProxy();
+      initApps(function() {
+        return initProxy();
+      });
     }
     return localization.initialize(function() {
       return setupRealtime(app, function() {
