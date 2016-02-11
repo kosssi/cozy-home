@@ -7,6 +7,7 @@ application = module.exports = (callback) ->
     americano = require 'americano'
     request = require 'request-json'
     localization = require './server/helpers/localization_manager'
+    initApps = require './server/initializers/apps'
     initProxy = require './server/initializers/proxy'
     setupRealtime = require './server/initializers/realtime'
     versionChecking = require './server/initializers/updates'
@@ -22,7 +23,8 @@ application = module.exports = (callback) ->
         app.server = server
 
         if process.env.NODE_ENV isnt "test"
-            initProxy()
+            initApps ->
+                initProxy()
 
         localization.initialize ->
             setupRealtime app, ->
