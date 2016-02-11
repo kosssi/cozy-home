@@ -60,7 +60,6 @@
     "build:clean": "rm -rf build",
     "build:client": "cd client && brunch b",
     "build:server": "cake build",
-    "build": "npm run build:clean && npm run build:client && npm run build:server",
-    "postinstall": "node postinstall.js"
+    "build": "npm run build:clean && npm run build:client && npm run build:server"
   }
 }
