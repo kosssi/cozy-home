@@ -11,7 +11,11 @@ module.exports = function(callback) {
   return Application.destroyAll(function() {
     return createApp('contacts', 9114, function() {
       return createApp('emails', 9125, function() {
-        return callback();
+        return createApp('files', 9121, function() {
+          return createApp('calendar', 9114, function() {
+            return callback();
+          });
+        });
       });
     });
   });
