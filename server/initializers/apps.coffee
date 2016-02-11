@@ -4,8 +4,9 @@ Application = require '../models/application'
 
 module.exports = (callback) ->
     Application.destroyAll ->
-        createApp 'contacts', 9114 ->
-            createApp 'emails', 9125 ->
+        createApp 'contacts', 9114, ->
+            createApp 'emails', 9125, ->
+                callback()
 
 
 createApp = (name, port, callback) ->
