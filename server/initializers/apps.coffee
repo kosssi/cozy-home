@@ -1,3 +1,4 @@
+path = require 'path'
 Application = require '../models/application'
 
 module.exports = (callback) ->
@@ -18,6 +19,10 @@ module.exports = (callback) ->
             iconType: "svg"
             port: 9114
 
-        Application.create data, callback
-
+        Application.create data, (err, app) ->
+            iconPath = path.join(
+                __dirname, '..', '..', 'client', 'assets', 'img', 'apps', 'contacts.svg'
+            )
+            app.attachFile iconPath, name: 'icon.svg', (err) ->
+                callback()
 
