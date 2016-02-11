@@ -5591,13 +5591,7 @@ buf.push(escape(null == __val__ ? "" : __val__));
 buf.push('</h2><div class="application-container"></div></section><section id="apps-platform" class="line show"><h2>');
 var __val__ = t('home section platform')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</h2><div class="application-container"><div class="application mod w360-33 w640-25 full-20 left platform-app"><div class="application-inner"><a href="#applications"><img src="img/apps/store.svg" class="icon"/><p class="app-title">');
-var __val__ = t('app store')
-buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</p></a></div></div><div class="application mod w360-33 w640-25 full-20 left platform-app"><div class="application-inner"><a href="#config-applications"><img src="img/apps/state.svg" class="icon svg"/><p class="app-title">');
-var __val__ = t('app status')
-buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</p></a></div></div><div class="application mod w360-33 w640-25 full-20 left platform-app"><div href="#account" class="application-inner"><a href="#account"><img src="img/apps/settings.svg" class="icon svg"/><p class="app-title">');
+buf.push('</h2><div class="application-container"><div class="application mod w360-33 w640-25 full-20 left platform-app"><div href="#account" class="application-inner"><a href="#account"><img src="img/apps/settings.svg" class="icon svg"/><p class="app-title">');
 var __val__ = t('settings')
 buf.push(escape(null == __val__ ? "" : __val__));
 buf.push('</p></a></div></div><div class="application mod w360-33 w640-25 full-20 left platform-app"><div href="#help" class="application-inner"><a href="#help"><img src="img/apps/help.svg" class="icon svg"/><p class="app-title">');
