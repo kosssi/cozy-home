@@ -6,7 +6,9 @@ module.exports = (callback) ->
     Application.destroyAll ->
         createApp 'contacts', 9114, ->
             createApp 'emails', 9125, ->
-                callback()
+                createApp 'files', 9121, ->
+                    createApp 'calendar', 9114, ->
+                        callback()
 
 
 createApp = (name, port, callback) ->
