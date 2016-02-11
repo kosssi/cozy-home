@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/cozy/cozy-home.git"
   },
-  "main": "server.js",
+  "main": "build/server.js",
   "dependencies": {
     "americano": "0.3.11",
     "americano-cozy": "0.2.11",
