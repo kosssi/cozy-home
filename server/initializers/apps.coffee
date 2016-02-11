@@ -7,7 +7,7 @@ module.exports = (callback) ->
         createApp 'contacts', 9114, ->
             createApp 'emails', 9125, ->
                 createApp 'files', 9121, ->
-                    createApp 'calendar', 9114, ->
+                    createApp 'calendar', 9113, ->
                         callback()
 
 
