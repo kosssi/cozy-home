@@ -1,4 +1,5 @@
 path = require 'path'
+fs = require 'fs'
 Application = require '../models/application'
 
 module.exports = (callback) ->
@@ -21,8 +22,9 @@ module.exports = (callback) ->
 
         Application.create data, (err, app) ->
             iconPath = path.join(
-                __dirname, '..', '..', 'client', 'assets', 'img', 'apps', 'contacts.svg'
+                __dirname, '..', '..', 'client', 'public', 'img', 'apps', 'contacts.svg'
             )
+            console.log fs.readFileSync iconPath
             app.attachFile iconPath, name: 'icon.svg', (err) ->
                 callback()
 
