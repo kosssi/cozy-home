@@ -21,7 +21,7 @@ createApp = function(name, port, callback) {
   var data;
   data = {
     name: "" + name,
-    displayName: "Contacts",
+    displayName: "" + name,
     description: name + " description",
     slug: "" + name,
     state: "installed",

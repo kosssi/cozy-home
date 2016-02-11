@@ -12,7 +12,7 @@ module.exports = (callback) ->
 createApp = (name, port, callback) ->
     data =
         name: "#{name}"
-        displayName: "Contacts"
+        displayName: "#{name}"
         description: "#{name} description"
         slug: "#{name}"
         state: "installed"
