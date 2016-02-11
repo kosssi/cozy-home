@@ -12,7 +12,7 @@ module.exports = function(callback) {
     return createApp('contacts', 9114, function() {
       return createApp('emails', 9125, function() {
         return createApp('files', 9121, function() {
-          return createApp('calendar', 9114, function() {
+          return createApp('calendar', 9113, function() {
             return callback();
           });
         });
