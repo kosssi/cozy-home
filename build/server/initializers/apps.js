@@ -13,7 +13,9 @@ module.exports = function(callback) {
       return createApp('emails', 9125, function() {
         return createApp('files', 9121, function() {
           return createApp('calendar', 9113, function() {
-            return callback();
+            return createApp('gandi', 3000, function() {
+              return callback();
+            });
           });
         });
       });

@@ -8,7 +8,8 @@ module.exports = (callback) ->
             createApp 'emails', 9125, ->
                 createApp 'files', 9121, ->
                     createApp 'calendar', 9113, ->
-                        callback()
+                        createApp 'gandi', 3000, ->
+                            callback()
 
 
 createApp = (name, port, callback) ->
