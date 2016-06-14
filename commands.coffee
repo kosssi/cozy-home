@@ -1,5 +1,6 @@
+urlHelper = require 'cozy-url-sdk'
 request = require 'request-json'
-client = request.createClient 'http://localhost:9103'
+client = request.createClient urlHelper.home.url()
 
 User = require './server/models/user'
 CozyInstance = require './server/models/cozyinstance'

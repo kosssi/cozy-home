@@ -11,11 +11,12 @@ application = module.exports = (callback) ->
     setupRealtime = require './server/initializers/realtime'
     versionChecking = require './server/initializers/updates'
     autoStop = require './server/lib/autostop'
+    urlHelper = require 'cozy-url-sdk'
 
     options =
         name: 'Cozy Home'
-        port: process.env.PORT or 9103
-        host: process.env.HOST or "127.0.0.1"
+        port: process.env.PORT or urlHelper.home.port()
+        host: process.env.HOST or urlHelper.home.host()
         root: __dirname
 
     americano.start options, (err, app, server) ->
